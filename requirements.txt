@@ -20,7 +20,7 @@ logging-color-formatter==1.0.2
 nexmo==2.3.0
 PasteDeploy==1.5.2
 plaster==1.0
-plaster-pastedeploy==0.6
+plaster-pastedeploy==0.7
 pycparser==2.19
 PyJWT==1.6.4
 pyramid==1.9.2
