@@ -18,7 +18,7 @@ jsonpointer==2.0
 jsonschema==3.2.0
 kinto==13.6.2
 logging-color-formatter==1.0.2
-more-itertools==7.2.0
+more-itertools==8.0.2
 nexmo==2.4.0
 PasteDeploy==2.0.1
 plaster==1.0
