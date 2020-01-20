@@ -1,15 +1,19 @@
 language: python
-python: 3.7
-sudo: false
+dist: bionic
 services: redis-server
-env:
-    - TOX_ENV=py35
-    - TOX_ENV=kinto-master
-    - TOX_ENV=flake8
+python:
+  - 3.6
+  - 3.7
+  - 3.8
 install:
-    - pip install tox
+  - pip install tox
+  - pip install -q tox-travis
 script:
-    - tox -e $TOX_ENV
+  - tox
+install:
+    - pip install tox tox-travis
+script:
+    - tox
 after_success:
     # Report coverage results to coveralls.io
     - pip install coveralls
