@@ -99,7 +99,7 @@ To initiate a passwordless session, start by sending the mobile phone number to 
 
 .. code-block:: http
 
-    $ http POST http://localhost:8000/v1/nexmo/verify number=447700900000 brand=MyApp -v
+    $ http POST http://localhost:8000/v1/nexmo/verify number=447700900000 -v
 
     POST /v1/nexmo/verify HTTP/1.1
     Accept: application/json, */*
@@ -111,7 +111,6 @@ To initiate a passwordless session, start by sending the mobile phone number to 
     User-Agent: HTTPie/0.9.9
     
     {
-        "brand": "MyApp", 
         "number": "447700900000"
     }
 
