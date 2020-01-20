@@ -1,16 +1,17 @@
-import unittest
 from datetime import datetime, timedelta
 from time import sleep
+import unittest
 from unittest import mock
 
 import jwt
 import kinto.core
-import webtest
 from kinto.core.errors import ERRORS
 from kinto.core.testing import FormattedErrorMixin
 from kinto.core.utils import random_bytes_hex
 from pyramid.config import Configurator
 from requests.exceptions import ConnectionError, HTTPError
+
+import webtest
 
 from . import AuthenticationMockMixin
 

@@ -1,12 +1,12 @@
+from datetime import datetime, timedelta
 import time
 import unittest
-from datetime import datetime, timedelta
 from unittest import mock
 
 import jwt
-import requests
 from kinto.core.cache import memory as memory_backend
 from kinto.core.testing import DummyRequest
+import requests
 
 from kinto_nexmo_verify import DEFAULT_SETTINGS, authentication
 

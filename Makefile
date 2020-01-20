@@ -43,4 +43,4 @@ black: install-dev
 	$(VENV)/bin/black kinto_nexmo_verify
 
 isort: install-dev
-	$(VENV)/bin/isort -y -m3 --line-width=99 --use-parentheses --trailing-comma --recursive --virtual-env=.venv
+	$(VENV)/bin/isort -y -m3 --line-width=99 --use-parentheses --trailing-comma --recursive --combine-as --force-sort-within-sections --virtual-env=$${VIRTUAL_ENV} kinto_nexmo_verify

@@ -1,16 +1,16 @@
+from datetime import datetime, timedelta
 import json
 import logging
 import uuid
-from datetime import datetime, timedelta
 
 import colander
-import jwt
-import requests
 from cornice.validators import colander_validator
+import jwt
 from kinto.core import Service
 from kinto.core.errors import ERRORS, http_error, json_error_handler, raise_invalid
 from pyramid import httpexceptions
 from pyramid.security import NO_PERMISSION_REQUIRED
+import requests
 
 from .conf import nexmo_conf
 

@@ -2,10 +2,10 @@ import logging
 from uuid import UUID
 
 import jwt
-import requests
 from kinto.core.utils import hmac_digest
 from pyramid import authentication as base_auth
 from pyramid.interfaces import IAuthenticationPolicy
+import requests
 from zope.interface import implementer
 
 from .conf import nexmo_conf
