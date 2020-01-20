@@ -1,18 +1,16 @@
-from datetime import datetime, timedelta
 import json
 import logging
 import uuid
-
-from pyramid import httpexceptions
-from pyramid.security import NO_PERMISSION_REQUIRED
-
-from kinto.core import Service
-from kinto.core.errors import ERRORS, http_error, json_error_handler, raise_invalid
+from datetime import datetime, timedelta
 
 import colander
-from cornice.validators import colander_validator
 import jwt
 import requests
+from cornice.validators import colander_validator
+from kinto.core import Service
+from kinto.core.errors import ERRORS, http_error, json_error_handler, raise_invalid
+from pyramid import httpexceptions
+from pyramid.security import NO_PERMISSION_REQUIRED
 
 from .conf import nexmo_conf
 

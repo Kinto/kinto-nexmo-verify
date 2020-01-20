@@ -1,16 +1,16 @@
 import time
 import unittest
+from datetime import datetime, timedelta
 from unittest import mock
+
 import jwt
 import requests
-
-from . import AuthenticationMockMixin
-from datetime import datetime, timedelta
-
-from kinto_nexmo_verify import authentication, DEFAULT_SETTINGS
-
 from kinto.core.cache import memory as memory_backend
 from kinto.core.testing import DummyRequest
+
+from kinto_nexmo_verify import DEFAULT_SETTINGS, authentication
+
+from . import AuthenticationMockMixin
 
 
 class PasswordlessAuthenticationPolicyTest(AuthenticationMockMixin, unittest.TestCase):

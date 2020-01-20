@@ -1,8 +1,7 @@
 import logging
 
-from pyramid.exceptions import ConfigurationError
-
 import pkg_resources
+from pyramid.exceptions import ConfigurationError
 
 from .authentication import nexmo_ping
 

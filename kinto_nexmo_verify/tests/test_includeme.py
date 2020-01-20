@@ -1,8 +1,8 @@
 import unittest
 
 import kinto.core
-from pyramid.exceptions import ConfigurationError
 from pyramid import testing
+from pyramid.exceptions import ConfigurationError
 
 from kinto_nexmo_verify import includeme
 

@@ -1,12 +1,11 @@
-import jwt
 import logging
-import requests
 from uuid import UUID
 
+import jwt
+import requests
+from kinto.core.utils import hmac_digest
 from pyramid import authentication as base_auth
 from pyramid.interfaces import IAuthenticationPolicy
-
-from kinto.core.utils import hmac_digest
 from zope.interface import implementer
 
 from .conf import nexmo_conf
@@ -38,17 +37,6 @@ class PasswordlessAuthenticationPolicy(base_auth.CallbackAuthenticationPolicy):
 
         user_id = self._verify_token(token, request)
         return user_id
-
-    def forget(self, request):
-        """A no-op. Credentials are sent on every request.
-        Return WWW-Authenticate Realm header for Bearer token.
-        """
-        return [
-            (
-                "WWW-Authenticate",
-                '{} realm="{}"'.format(nexmo_conf(request, "header_type"), self.realm),
-            )
-        ]
 
     def _verify_token(self, access_token, request):
         """Verify the token extracted from the Authorization header.
