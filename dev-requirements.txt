@@ -1,5 +1,11 @@
-kinto
+black
 coverage
-mock
-nose
+flake8
+isort
+kinto
+pytest
+pytest-cache
+pytest-cov
+pytest-sugar
+pytest-xdist
 webtest

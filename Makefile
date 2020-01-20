@@ -37,4 +37,10 @@ tests: tox
 	$(VENV)/bin/tox
 
 tests-once: install-dev
-	$(VENV)/bin/nosetests -s --with-coverage --cover-min-percentage=100 --cover-package=kinto_nexmo_verify kinto_nexmo_verify
+	$(VENV)/bin/pytest -s --cov-report term-missing --cov-branch --cov-fail-under 100 --cov kinto_nexmo_verify kinto_nexmo_verify
+
+black: install-dev
+	$(VENV)/bin/black kinto_nexmo_verify
+
+isort: install-dev
+	$(VENV)/bin/isort -y -m3 --line-width=99 --use-parentheses --trailing-comma --recursive --combine-as --force-sort-within-sections --virtual-env=$${VIRTUAL_ENV} kinto_nexmo_verify
