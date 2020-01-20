@@ -38,3 +38,6 @@ tests: tox
 
 tests-once: install-dev
 	$(VENV)/bin/nosetests -s --with-coverage --cover-min-percentage=100 --cover-package=kinto_nexmo_verify kinto_nexmo_verify
+
+black: install-dev
+	$(VENV)/bin/black kinto_nexmo_verify
