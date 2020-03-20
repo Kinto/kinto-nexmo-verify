@@ -45,4 +45,4 @@ waitress==1.4.3
 WebOb==1.8.6
 zipp==2.2.0
 zope.deprecation==4.4.0
-zope.interface==4.7.2
+zope.interface==5.0.0
