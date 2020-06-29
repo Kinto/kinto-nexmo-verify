@@ -8,7 +8,7 @@ colorama==0.4.3
 cornice==4.0.1
 cornice-swagger==0.7.0
 cryptography==2.9.2
-dockerflow==2019.10.0
+dockerflow==2020.6.0
 hupper==1.10.2
 idna==2.9
 importlib-metadata==1.7.0
